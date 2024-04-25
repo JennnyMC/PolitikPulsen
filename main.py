@@ -5,26 +5,46 @@ import flet as ft
 
 
 def main(page: ft.Page):
-
-    page.drawer = ft.NavigationDrawer(
+    
+    page.drawer = ft.NavigationDrawer(bgcolor="0xFFACE7F4",
             controls=[
             ft.Container(height=12),
             ft.NavigationDrawerDestination(
-                label="Item 1",
+                label="Hem",
                 icon=ft.icons.DOOR_BACK_DOOR_OUTLINED,
                 selected_icon_content=ft.Icon(ft.icons.DOOR_BACK_DOOR),
             ),
             ft.Divider(thickness=2),
             ft.NavigationDrawerDestination(
-                icon_content=ft.Icon(ft.icons.MAIL_OUTLINED),
-                label="Item 2",
-                selected_icon=ft.icons.MAIL,
+                icon_content=ft.Icon(ft.icons.ARROW_FORWARD_IOS),
+                label="Åsiktsjämförelse", 
+                selected_icon=ft.icons.ARROW_FORWARD_IOS,
             ),
             ft.NavigationDrawerDestination(
-                icon_content=ft.Icon(ft.icons.PHONE_OUTLINED),
-                label="Item 3",
-                selected_icon=ft.icons.PHONE,
+                icon_content=ft.Icon(ft.icons.ARROW_FORWARD_IOS),
+                label="Genomförda vallöften",
+                selected_icon=ft.icons.ARROW_FORWARD_IOS,
             ),
+            ft.NavigationDrawerDestination(
+                icon_content=ft.Icon(ft.icons.ARROW_FORWARD_IOS),
+                label="Partiståndpunkter",
+                selected_icon=ft.icons.ARROW_FORWARD_IOS,
+            ),
+            ft.NavigationDrawerDestination(
+                icon_content=ft.Icon(ft.icons.ARROW_FORWARD_IOS),
+                label="Vad händer hos dig?",
+                selected_icon=ft.icons.ARROW_FORWARD_IOS,
+            ),
+            ft.NavigationDrawerDestination(
+                icon_content=ft.Icon(ft.icons.STAR_ROUNDED),
+                label="Quiz",
+                selected_icon=ft.icons.STAR,
+            ),
+            ft.NavigationDrawerDestination(
+                icon_content=ft.Icon(ft.icons.STAR_ROUNDED),
+                label="Topplista",
+                selected_icon=ft.icons.STAR,
+            )
         ],
     )
 
@@ -56,7 +76,8 @@ def main(page: ft.Page):
                 controls=[
                 
 
-                ]
+                ],
+                
             )
         )
     )
