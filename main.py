@@ -2,7 +2,7 @@ import math
 import flet as ft
 
 def main(page: ft.Page):
-    page.title = "Routes Example"
+    page.title = "Routes Example" 
 
    
     def route_change(route):
