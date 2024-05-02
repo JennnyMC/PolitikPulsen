@@ -2,34 +2,7 @@ import math
 import flet as ft
 
 def main(page: ft.Page):
-    page.title = "Routes Example"
-    def add_images_to_values_view():
-        # List of image URLs
-        image_urls = [
-            "https://upload.wikimedia.org/wikipedia/commons/0/00/V%C3%A4nsterpartiet_logo.svg",
-            "https://bilder.riksdagen.se/publishedmedia/3sgk8lpoqlu2mht11nov/MP_partilogga.png",
-            "https://bilder.riksdagen.se/publishedmedia/e9omiy7wkxkhts7ptwal/Symbol_Socialdemokraterna-_134px.png",
-            "https://upload.wikimedia.org/wikipedia/commons/3/33/C_v1.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/c/c7/L_v1.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/8/85/M_v1.svg",
-            "https://bilder.riksdagen.se/publishedmedia/bnz3yl48fswzmc8cd4m8/KD_partilogga.png",
-            "https://bilder.riksdagen.se/publishedmedia/6gxtyz3j95i9xr0ejrbn/Sveriedemokraterna_132px.png",
-        ]
-
-        # Add images to the row
-        images = ft.Row(expand=1, wrap=False, scroll="always")
-        for url in image_urls:
-            images.controls.append(
-                ft.Image(
-                    src=url,
-                    width=100,
-                    height=100,
-                    fit=ft.ImageFit.FIT_HEIGHT,
-                    repeat=ft.ImageRepeat.NO_REPEAT,
-                    border_radius=ft.border_radius.all(10),
-                )
-            )
-        return images
+    page.title = "Routes Example" 
 
    
     def route_change(route):
@@ -86,24 +59,6 @@ def main(page: ft.Page):
                     [
                         ft.AppBar(title=ft.Text("Partiståndpunkter"), bgcolor=ft.colors.SURFACE_VARIANT),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
-                        ft.Text(
-                            "Sammanfattning Partiåsikter",
-                            size=50,
-                            color=ft.colors.WHITE,
-                            bgcolor=ft.colors.BLUE_400,
-                            weight=ft.FontWeight.NORMAL,
-                            ),
-                        ft.Divider(),
-                        ft.ElevatedButton("Välj Område"),
-                        ft.Divider(),
-                        ft.Text(
-                            "Välj Parti:",
-                            size=30,
-                            color=ft.colors.WHITE,
-                            bgcolor=ft.colors.BLUE_400,
-                            weight=ft.FontWeight.NORMAL,
-                            ),
-                        add_images_to_values_view()
                     ]
 
                 )
