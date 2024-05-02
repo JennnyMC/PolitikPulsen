@@ -2,29 +2,35 @@ import math
 import flet as ft
 
 def main(page: ft.Page):
-    page.title = "Routes Example" 
-
+    page.title = "PolitikPulsen"
+    BG = "#1A5577"
+    MC = "#60AEDA"
    
+
     def route_change(route):
         page.views.clear()
         page.views.append(
             ft.View(
                 "/",
                 [
-                    ft.AppBar(title=ft.Text("Politik Pulsen"), bgcolor=ft.colors.SURFACE_VARIANT),
+                    ft.AppBar(title=ft.Text("PolitikPulsen"), bgcolor=MC),
                     ft.Container(
                         content=ft.Column(
                             [
-                                ft.ElevatedButton("Åsiktsjämförelse", on_click=lambda _: page.go("/compare")),
-                                ft.ElevatedButton("Genomförda Vallöften", on_click=lambda _: page.go("/stats")),
-                                ft.ElevatedButton("Partiståndpunkter", on_click=lambda _: page.go("/values")),
-                                ft.ElevatedButton("Vad Händer Hos Dig?", on_click=lambda _:page.go("/local")),
-                                ft.ElevatedButton("Quiz", on_click=lambda _:page.go("/quest")),
-                                ft.ElevatedButton("Topplista", on_click=lambda _:page.go("/toplist"))
-                            ]
+                                ft.ElevatedButton("Åsiktsjämförelse",icon="ARROW_FORWARD_IOS", on_click=lambda _: page.go("/compare")),
+                                ft.ElevatedButton("Genomförda Vallöften", icon="ARROW_FORWARD_IOS", on_click=lambda _: page.go("/stats")),
+                                ft.ElevatedButton("Partiståndpunkter", icon="ARROW_FORWARD_IOS", on_click=lambda _: page.go("/values")),
+                                ft.ElevatedButton("Vad Händer Hos Dig?", icon="ARROW_FORWARD_IOS", on_click=lambda _:page.go("/local")),
+                                ft.ElevatedButton("Quiz", icon="STAR_ROUNDED", on_click=lambda _:page.go("/quest")),
+                                ft.ElevatedButton("Topplista", icon="STAR_ROUNDED", on_click=lambda _:page.go("/toplist"))
+                            ],
+                            alignment=ft.MainAxisAlignment.CENTER
                         ),
-                        bgcolor = ft.colors.BLUE_200,
-                        border_radius= 5
+                        bgcolor = BG,
+                        border_radius=35,
+                        width=350,
+                        height=700,
+                        alignment=ft.alignment.center
                     )
                 ],
             )
@@ -34,8 +40,14 @@ def main(page: ft.Page):
                 ft.View(
                     "/compare",
                     [
-                        ft.AppBar(title=ft.Text("Jämför Ståndpunkter"), bgcolor=ft.colors.SURFACE_VARIANT),
+                        ft.AppBar(title=ft.Text("Jämför Ståndpunkter"), bgcolor=MC),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
                     ],
                 )
             )
@@ -45,8 +57,14 @@ def main(page: ft.Page):
                 ft.View(
                     "/stats",
                     [
-                        ft.AppBar(title=ft.Text("Genomförda vallöften"), bgcolor=ft.colors.SURFACE_VARIANT),
+                        ft.AppBar(title=ft.Text("Genomförda vallöften"), bgcolor=MC),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
                     ],
                 )
             )
@@ -57,8 +75,15 @@ def main(page: ft.Page):
                 ft.View(
                     "/values",
                     [
-                        ft.AppBar(title=ft.Text("Partiståndpunkter"), bgcolor=ft.colors.SURFACE_VARIANT),
+                        ft.AppBar(title=ft.Text("Partiståndpunkter"), bgcolor=MC),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
+                        
                     ]
 
                 )
@@ -70,8 +95,14 @@ def main(page: ft.Page):
                 ft.View(
                     "/local",
                     [
-                        ft.AppBar(title=ft.Text("Vad Händer Hos Dig?"), bgcolor=ft.colors.SURFACE_VARIANT),
+                        ft.AppBar(title=ft.Text("Vad Händer Hos Dig?"), bgcolor=MC),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
                     ]
                 )
             )
@@ -82,8 +113,14 @@ def main(page: ft.Page):
                 ft.View(
                     "/quest",
                     [
-                        ft.AppBar(title=ft.Text("Quiz"), bgcolor=ft.colors.SURFACE_VARIANT),
+                        ft.AppBar(title=ft.Text("Quiz"), bgcolor=MC),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
                     ]
                 )
             )
@@ -94,8 +131,14 @@ def main(page: ft.Page):
                 ft.View(
                     "/toplist",
                     [
-                        ft.AppBar(title=ft.Text("Topplista"), bgcolor=ft.colors.SURFACE_VARIANT),
+                        ft.AppBar(title=ft.Text("Topplista"), bgcolor=MC),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
                     ]
                 )
             )
