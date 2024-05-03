@@ -69,7 +69,7 @@ def main(page: ft.Page):
             dd = ft.Dropdown(
                     options=[
                         ft.dropdown.Option("Skola"),
-                        ft.dropdown.Option("Brott&Straff"),
+                        ft.dropdown.Option("Brottsbekämpning"),
                         ft.dropdown.Option("Välfärd"),
                         ft.dropdown.Option("Integration"),
                         ft.dropdown.Option("Klimat"),
@@ -108,7 +108,7 @@ def main(page: ft.Page):
                 ft.View(
                     "/skola",
                     [
-                        ft.AppBar(title=ft.Text("Jämför Ståndpunkter"), bgcolor=MC),
+                        ft.AppBar(title=ft.Text("Jämför Ståndpunkter - Skola"), bgcolor=MC),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
@@ -129,6 +129,39 @@ def main(page: ft.Page):
                                     ft.Text("   - Liberalerna vill ha fler lärare och stödlärare", color=ft.colors.WHITE),
                                     ft.Text("   - Sverigedemokraterna vill öka budgeten för tolkar och svenskaundervisning", color=ft.colors.WHITE),
                                     ft.Text("   - Kristdemokraterna vill ha mindre klasser för att ha fler lärare per elev", color=ft.colors.WHITE)
+                                ]
+                            )
+                        )
+                    ]
+                )
+            )
+
+        if page.route == "/brottsbekämpning":
+            page.views.append(
+                ft.View(
+                    "/brottsbekämpning",
+                    [
+                        ft.AppBar(title=ft.Text("Jämför Ståndpunkter - Brottsbekämpning"), bgcolor=MC),
+                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35,
+                            content = ft.Column(
+                                spacing=15,
+                                scroll=ft.ScrollMode.AUTO,
+                                controls=[
+                                    ft.Text(" "),
+                                    ft.Text(" "),
+                                    ft.Text("   - Moderaterna vill ha hårdare straff och lägga mer budget på tullen", color=ft.colors.WHITE),
+                                    ft.Text("   - Socialdemokraterna vill ha fler poliser och mer lokalt stöd", color=ft.colors.WHITE),
+                                    ft.Text("   - Vänsterpartiet vill ge ha fler straffrabatter och arbeta med att få unga ut ur gängkriminalitet", color=ft.colors.WHITE),
+                                    ft.Text("   - Miljöpartiet vill jobba proaktivt från skolan med att minska kriminalitet bland unga", color=ft.colors.WHITE),
+                                    ft.Text("   - Centerpartiet vill ha fler poliser på stan och öka allmänhetens uppsikt", color=ft.colors.WHITE),
+                                    ft.Text("   - Liberalerna vill ha hårdare straff och minska straffrabatten", color=ft.colors.WHITE),
+                                    ft.Text("   - Sverigedemokraterna vill jobba mer aggressivt i utsatta områden frö att minska gängverksamhet", color=ft.colors.WHITE),
+                                    ft.Text("   - Kristdemokraterna vill ha hårdare straff", color=ft.colors.WHITE)
                                 ]
                             )
                         )
