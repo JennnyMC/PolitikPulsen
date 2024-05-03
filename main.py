@@ -114,7 +114,23 @@ def main(page: ft.Page):
                             width=350,
                             height=700,
                             bgcolor=BG,
-                            border_radius=35
+                            border_radius=35,
+                            content = ft.Column(
+                                spacing=15,
+                                scroll=ft.ScrollMode.AUTO,
+                                controls=[
+                                    ft.Text(" "),
+                                    ft.Text(" "),
+                                    ft.Text("   - Moderaterna vill att alla ska gå i skolan", color=ft.colors.WHITE),
+                                    ft.Text("   - Socialdemokraterna vill ha fler lärare", color=ft.colors.WHITE),
+                                    ft.Text("   - Vänsterpartiet vill ha fler bidrag till skolstöd", color=ft.colors.WHITE),
+                                    ft.Text("   - Miljöpartiet främjar en grönare syllabus", color=ft.colors.WHITE),
+                                    ft.Text("   - Centerpartiet avser att lägga mer vikt vid samhäll och kulturundervisning", color=ft.colors.WHITE),
+                                    ft.Text("   - Liberalerna vill ha fler lärare och stödlärare", color=ft.colors.WHITE),
+                                    ft.Text("   - Sverigedemokraterna vill öka budgeten för tolkar och svenskaundervisning", color=ft.colors.WHITE),
+                                    ft.Text("   - Kristdemokraterna vill ha mindre klasser för att ha fler lärare per elev", color=ft.colors.WHITE)
+                                ]
+                            )
                         )
                     ]
                 )
