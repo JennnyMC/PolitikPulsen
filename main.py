@@ -147,7 +147,7 @@ def main(page: ft.Page):
                         ft.dropdown.Option("Liberalerna"),
                         ft.dropdown.Option("Kristdemokraterna"),
                         ft.dropdown.Option("Miljöpartiet"),
-                        ft.dropdown.Option("Centerpartiet")
+                        ft.dropdown.Option("Centerpartiet"),
                     ],
                     width=200,
                     on_change=lambda _:page.go("/" + dv.value.lower() )
@@ -196,6 +196,18 @@ def main(page: ft.Page):
             )
 
         if page.route == "/local":
+            dl = ft.Dropdown(
+                    options=[
+                        ft.dropdown.Option("Göteborg"),
+                        ft.dropdown.Option("Arjeplog"),
+                        ft.dropdown.Option("Hovfors"),
+                        ft.dropdown.Option("Orsa"),
+                        ft.dropdown.Option("Stockholm"),
+                        ft.dropdown.Option("Kungälv"),
+                    ],
+                    width=200,
+                    on_change=lambda _:page.go("/" + dl.value.lower() )
+            )
             page.views.append(
                 ft.View(
                     "/local",
@@ -206,12 +218,37 @@ def main(page: ft.Page):
                             width=350,
                             height=700,
                             bgcolor=BG,
-                            border_radius=35
+                            border_radius=35,
+                            content= ft.Stack(
+                                controls=[
+                                    ft.Text("\n "),  # newline added here
+                                    ft.Text("\n "),  # additional newli
+                                    ft.Text("         Välj kommun", size=20, color=ft.colors.WHITE, italic=True),
+                                    dl,
+                                ]
+                            )
                         )
                     ]
                 )
             )
         page.update()
+        if page.route == "/göteborg":
+            page.views.append(
+                ft.View(
+                    "/göteborg",
+                    [
+                        ft.AppBar(title=ft.Text("Detta händer i Göteborg"), bgcolor=MC),
+                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
+                    ]
+                )
+            )
+
     
         if page.route == "/quest":
             page.views.append(
