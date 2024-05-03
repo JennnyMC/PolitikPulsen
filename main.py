@@ -5,7 +5,36 @@ def main(page: ft.Page):
     page.title = "PolitikPulsen"
     BG = "#1A5577"
     MC = "#60AEDA"
-   
+
+    def add_images_to_values_view():
+        # List of image URLs
+        image_urls = [
+            "https://upload.wikimedia.org/wikipedia/commons/0/00/V%C3%A4nsterpartiet_logo.svg",
+            "https://bilder.riksdagen.se/publishedmedia/3sgk8lpoqlu2mht11nov/MP_partilogga.png",
+            "https://bilder.riksdagen.se/publishedmedia/e9omiy7wkxkhts7ptwal/Symbol_Socialdemokraterna-_134px.png",
+            "https://upload.wikimedia.org/wikipedia/commons/3/33/C_v1.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/c/c7/L_v1.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/8/85/M_v1.svg",
+            "https://bilder.riksdagen.se/publishedmedia/bnz3yl48fswzmc8cd4m8/KD_partilogga.png",
+            "https://bilder.riksdagen.se/publishedmedia/6gxtyz3j95i9xr0ejrbn/Sveriedemokraterna_132px.png",
+        ]
+
+        # Add images to the row
+        images = ft.Row(expand=1, wrap=False, scroll="always")
+        for url in image_urls:
+            images.controls.append(
+                ft.Image(
+                    src=url,
+                    width=100,
+                    height=100,
+                    fit=ft.ImageFit.FIT_HEIGHT,
+                    repeat=ft.ImageRepeat.NO_REPEAT,
+                    border_radius=ft.border_radius.all(10),
+                )
+            )
+        return images
+    
+    
 
     def route_change(route):
         page.views.clear()
@@ -24,7 +53,7 @@ def main(page: ft.Page):
                                 ft.ElevatedButton("Quiz", icon="STAR_ROUNDED", on_click=lambda _:page.go("/quest")),
                                 ft.ElevatedButton("Topplista", icon="STAR_ROUNDED", on_click=lambda _:page.go("/toplist"))
                             ],
-                            alignment=ft.MainAxisAlignment.CENTER
+                            alignment=ft.MainAxisAlignment.CENTER,
                         ),
                         bgcolor = BG,
                         border_radius=35,
@@ -35,7 +64,20 @@ def main(page: ft.Page):
                 ],
             )
         )
+        print(page.route)
         if page.route == "/compare":
+            dd = ft.Dropdown(
+                    options=[
+                        ft.dropdown.Option("Skola"),
+                        ft.dropdown.Option("Brott&Straff"),
+                        ft.dropdown.Option("Välfärd"),
+                        ft.dropdown.Option("Integration"),
+                        ft.dropdown.Option("Klimat"),
+                        ft.dropdown.Option("Försvar"),
+                    ],
+                    width=200,
+                    on_change=lambda _:page.go("/" + dd.value.lower() )
+            )
             page.views.append(
                 ft.View(
                     "/compare",
@@ -46,12 +88,37 @@ def main(page: ft.Page):
                             width=350,
                             height=700,
                             bgcolor=BG,
-                            border_radius=35
+                            border_radius=35,
+                            content= ft.Stack(
+                                controls=[
+                                    ft.Text("\n "),  # newline added here
+                                    ft.Text("\n "),  # additional newli
+                                    ft.Text("         Välj parti", size=20, color=ft.colors.WHITE, italic=True),
+                                    dd,
+                                ],
+                            )
                         )
                     ],
                 )
             )
         page.update()
+
+        if page.route == "/skola":
+            page.views.append(
+                ft.View(
+                    "/skola",
+                    [
+                        ft.AppBar(title=ft.Text("Jämför Ståndpunkter"), bgcolor=MC),
+                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
+                    ]
+                )
+            )
         if page.route == "/stats":
             page.views.append(
                 ft.View(
@@ -71,6 +138,21 @@ def main(page: ft.Page):
         page.update()
 
         if page.route == "/values":
+            dv = ft.Dropdown(
+                    options=[
+                        ft.dropdown.Option("Moderaterna"),
+                        ft.dropdown.Option("Socialdemokraterna"),
+                        ft.dropdown.Option("Sverigedemokraterna"),
+                        ft.dropdown.Option("Vänsterpartiet"),
+                        ft.dropdown.Option("Liberalerna"),
+                        ft.dropdown.Option("Kristdemokraterna"),
+                        ft.dropdown.Option("Vänsterpartiet"),
+                        ft.dropdown.Option("Vänsterpartiet"),
+                        ft.dropdown.Option("Centerpartiet")
+                    ],
+                    width=200,
+                    on_change=lambda _:page.go("/" + dv.value.lower() )
+            )
             page.views.append(
                 ft.View(
                     "/values",
@@ -81,14 +163,38 @@ def main(page: ft.Page):
                             width=350,
                             height=700,
                             bgcolor=BG,
-                            border_radius=35
+                            border_radius=35,
+                            content= ft.Stack(
+                                controls=[
+                                    ft.Text("\n "),  # newline added here
+                                    ft.Text("\n "),  # additional newli
+                                    ft.Text("         Välj parti", size=20, color=ft.colors.WHITE, italic=True),
+                                    dv,
+                                ]
+                            )
                         )
-                        
                     ]
 
                 )
             )
         page.update()
+
+        if page.route == "/moderaterna":
+            page.views.append(
+                ft.View(
+                    "/moderaterna",
+                    [
+                        ft.AppBar(title=ft.Text("Partiståndpunkter - Moderaterna"), bgcolor=MC),
+                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
+                    ]
+                )
+            )
 
         if page.route == "/local":
             page.views.append(
