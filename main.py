@@ -146,8 +146,7 @@ def main(page: ft.Page):
                         ft.dropdown.Option("Vänsterpartiet"),
                         ft.dropdown.Option("Liberalerna"),
                         ft.dropdown.Option("Kristdemokraterna"),
-                        ft.dropdown.Option("Vänsterpartiet"),
-                        ft.dropdown.Option("Vänsterpartiet"),
+                        ft.dropdown.Option("Miljöpartiet"),
                         ft.dropdown.Option("Centerpartiet")
                     ],
                     width=200,
