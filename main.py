@@ -205,7 +205,7 @@ def main(page: ft.Page):
                 ft.View(
                     "/values",
                     [
-                        ft.AppBar(title=ft.Text("Partiståndpunkter"), bgcolor=MC),
+                        ft.AppBar(title=ft.Text("Sammanfattning Partiåsikter"), bgcolor=MC),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
@@ -232,7 +232,46 @@ def main(page: ft.Page):
                 ft.View(
                     "/moderaterna",
                     [
-                        ft.AppBar(title=ft.Text("Partiståndpunkter - Moderaterna"), bgcolor=MC),
+                        ft.AppBar(title=ft.Text("Sammanfattning Partiåsikter - Moderaterna"), bgcolor=MC),
+                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35,
+                             content = ft.Column(
+                                spacing=10,
+                                scroll=ft.ScrollMode.AUTO,
+                                controls=[
+                                    ft.Text(" "),
+                                    ft.Text(" "),
+                                    ft.Text("   Brott och Straff", size=15, color=ft.colors.WHITE),
+                                    ft.Text("   - Ge mer bidrag till tull för att stoppa smuggling av vapen, narkotika", color=ft.colors.WHITE),
+                                    ft.Text("   - Jobba proaktivt med att stoppa värvning av unga till gängkriminalitet", color=ft.colors.WHITE),
+                                    ft.Text("  "),
+                                    ft.Text("   Skola", size=15, color=ft.colors.WHITE),
+                                    ft.Text("   - Mer stödlärare och fler lärare bland klasser", color=ft.colors.WHITE),
+                                    ft.Text("   - Främja bättre studiero", color=ft.colors.WHITE),
+                                    ft.Text(" "),
+                                    ft.Text("   Välfärd", size=15, color=ft.colors.WHITE),
+                                    ft.Text("   - Sänka höginkomstskatten", color=ft.colors.WHITE),
+                                    ft.Text("   - Bromsa inflationen", color=ft.colors.WHITE),
+                                    ft.Text(" "),
+                                    ft.Text("   Försvar", size=15, color=ft.colors.WHITE),
+                                    ft.Text("   - Stärka Sveriges försvar mot utländska makter genom NATO", color=ft.colors.WHITE),
+                                    ft.Text("   - Införa obligatorisk värnplikt", color=ft.colors.WHITE)
+                                ]
+                             )  
+                        )
+                    ]
+                )
+            )
+        if page.route == "/socialdemokraterna":
+            page.views.append(
+                ft.View(
+                    "/socialdemokraterna",
+                    [
+                        ft.AppBar(title=ft.Text("Sammanfattning Partiåsikter - Socialdemokraterna"), bgcolor=MC),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
@@ -287,6 +326,54 @@ def main(page: ft.Page):
                     "/göteborg",
                     [
                         ft.AppBar(title=ft.Text("Detta händer i Göteborg"), bgcolor=MC),
+                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
+                    ]
+                )
+            )
+        if page.route == "/göteborg":
+            page.views.append(
+                ft.View(
+                    "/göteborg",
+                    [
+                        ft.AppBar(title=ft.Text("Detta händer i Göteborg"), bgcolor=MC),
+                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
+                    ]
+                )
+            )
+        if page.route == "/arjeplog":
+            page.views.append(
+                ft.View(
+                    "/arjeplog",
+                    [
+                        ft.AppBar(title=ft.Text("Detta händer i Arjeplog"), bgcolor=MC),
+                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ft.Container(
+                            width=350,
+                            height=700,
+                            bgcolor=BG,
+                            border_radius=35
+                        )
+                    ]
+                )
+            )
+        if page.route == "/hovfors":
+            page.views.append(
+                ft.View(
+                    "/hovfors",
+                    [
+                        ft.AppBar(title=ft.Text("Detta händer i Hovfors"), bgcolor=MC),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
