@@ -122,14 +122,14 @@ def main(page: ft.Page):
                                 controls=[
                                     ft.Text(" "),
                                     ft.Text(" "),
-                                    ft.Text("   - Moderaterna betonar höjda kunskapskrav och ökad lärarkompetens med en inriktning på kärnämnena samt valfrihet för elever och föräldrar genom fler skolalternativ.", color=ft.colors.WHITE),
-                                    ft.Text("   - Socialdemokraterna fokuserar på att förbättra likvärdigheten i skolan genom resurstillskott till socioekonomiskt utsatta områden och stärkande av läraryrkets status.", color=ft.colors.WHITE),
-                                    ft.Text("   - Vänsterpartiet arbetar för en jämlik skola med likvärdiga förutsättningar för alla elever genom åtgärder mot skolsegregation, offentlig kontroll över skolpengen och stopp för vinster i skolan.", color=ft.colors.WHITE),
-                                    ft.Text("   - Miljöpartiet strävar efter en hållbar och inkluderande skola med satsningar på miljö- och utomhuspedagogik samt minskade klyftor genom resursförstärkningar till utsatta områden.", color=ft.colors.WHITE),
-                                    ft.Text("   - Centerpartiet strävar efter individanpassad undervisning och mindre klassstorlekar med ökad autonomi för skolor och satsningar på digitalisering och entreprenörskap.", color=ft.colors.WHITE),
-                                    ft.Text("   - Liberalerna fokuserar på att höja läraryrkets status och främja valfrihet för elever och föräldrar genom fler skolalternativ och kompetensbaserade lönesystem.", color=ft.colors.WHITE),
-                                    ft.Text("   - Sverigedemokraterna fokuserar på att stärka den svenska skolan genom att betona trygghet, disciplin och nationellt fokus i undervisningen samt ökad kontroll över invandringens påverkan på skolan.", color=ft.colors.WHITE),
-                                    ft.Text("   - Kristdemokraterna betonar trygghet och auktoritet i skolan genom stärkande av lärarnas roll och samarbete mellan skola, föräldrar och lokalsamhälle.", color=ft.colors.WHITE)
+                                    ft.Text("   - Moderaterna vill att alla ska gå i skolan", color=ft.colors.WHITE),
+                                    ft.Text("   - Socialdemokraterna vill ha fler lärare", color=ft.colors.WHITE),
+                                    ft.Text("   - Vänsterpartiet vill ha fler bidrag till skolstöd", color=ft.colors.WHITE),
+                                    ft.Text("   - Miljöpartiet främjar en grönare syllabus", color=ft.colors.WHITE),
+                                    ft.Text("   - Centerpartiet avser att lägga mer vikt vid samhäll och kulturundervisning", color=ft.colors.WHITE),
+                                    ft.Text("   - Liberalerna vill ha fler lärare och stödlärare", color=ft.colors.WHITE),
+                                    ft.Text("   - Sverigedemokraterna vill öka budgeten för tolkar och svenskaundervisning", color=ft.colors.WHITE),
+                                    ft.Text("   - Kristdemokraterna vill ha mindre klasser för att ha fler lärare per elev", color=ft.colors.WHITE)
                                 ]
                             )
                         )
@@ -155,14 +155,14 @@ def main(page: ft.Page):
                                 controls=[
                                     ft.Text(" "),
                                     ft.Text(" "),
-                                    ft.Text("   - Moderaterna förespråkar hårdare straff och restriktivare åtgärder för att bekämpa brottslighet", color=ft.colors.WHITE),
-                                    ft.Text("   - Socialdemokraterna har en balanserad syn som värdesätter både förebyggande arbete och effektiva straffåtgärder för att minska brottsligheten", color=ft.colors.WHITE),
-                                    ft.Text("   - Vänsterpartiet betonar förebyggande åtgärder och alternativa straffmetoder för att minska brottsligheten", color=ft.colors.WHITE),
-                                    ft.Text("   - Miljöpartiet lägger fokus på att adressera sociala orsaker till brottslighet och förespråkar alternativa metoder för att minska den", color=ft.colors.WHITE),
-                                    ft.Text("   - Centerpartiet betonar vikten av en balans mellan förebyggande åtgärder och straffåtgärder för att öka tryggheten i samhället", color=ft.colors.WHITE),
-                                    ft.Text("   - Liberalerna söker en balans mellan straff och rehabilitering, med en betoning på individuell ansvarighet och förebyggande arbete för att minska brottslighet", color=ft.colors.WHITE),
-                                    ft.Text("   - Sverigedemokraterna lutar mot en hårdare linje med krav på strängare straff och en restriktiv invandringspolitik som kopplas till brottslighet", color=ft.colors.WHITE),
-                                    ft.Text("   - Kristdemokraterna fokuserar på att stärka brottsoffrens rättigheter och stödja hårdare straff för grova brott, samtidigt som de betonar vikten av förebyggande åtgärder och rehabilitering", color=ft.colors.WHITE)
+                                    ft.Text("   - Moderaterna vill ha hårdare straff och lägga mer budget på tullen", color=ft.colors.WHITE),
+                                    ft.Text("   - Socialdemokraterna vill ha fler poliser och mer lokalt stöd", color=ft.colors.WHITE),
+                                    ft.Text("   - Vänsterpartiet vill ge ha fler straffrabatter och arbeta med att få unga ut ur gängkriminalitet", color=ft.colors.WHITE),
+                                    ft.Text("   - Miljöpartiet vill jobba proaktivt från skolan med att minska kriminalitet bland unga", color=ft.colors.WHITE),
+                                    ft.Text("   - Centerpartiet vill ha fler poliser på stan och öka allmänhetens uppsikt", color=ft.colors.WHITE),
+                                    ft.Text("   - Liberalerna vill ha hårdare straff och minska straffrabatten", color=ft.colors.WHITE),
+                                    ft.Text("   - Sverigedemokraterna vill jobba mer aggressivt i utsatta områden frö att minska gängverksamhet", color=ft.colors.WHITE),
+                                    ft.Text("   - Kristdemokraterna vill ha hårdare straff", color=ft.colors.WHITE)
                                 ]
                             )
                         )
@@ -247,20 +247,24 @@ def main(page: ft.Page):
                                     ft.Text(" "),
                                     ft.Text(" "),
                                     ft.Text("   Brott och Straff", size=15, color=TC),
-                                    ft.Text("   - Ge mer bidrag till tull för att stoppa smuggling av vapen, narkotika", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Jobba proaktivt med att stoppa värvning av unga till gängkriminalitet", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Till år 2026 ökar regeringen anslaget till polisen 10 miljarder kronor.", color=ft.colors.WHITE),
+                                    ft.Text("   - De vill ha hårdare straff", color=ft.colors.WHITE),
+                                    ft.Text("   - De vill ha ett ökat fokus på brottsoffret", color=ft.colors.WHITE),
                                     ft.Text("  "),
                                     ft.Text("   Skola", size=15, color=TC),
-                                    ft.Text("   - Mer stödlärare och fler lärare bland klasser", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Främja bättre studiero", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Återupprätta kunskapsfokus", color=ft.colors.WHITE),
+                                    ft.Text("   - Stärka lärarrollen", color=ft.colors.WHITE),
+                                    ft.Text("   - Öka trygghet och studiero i klassrummet", color=ft.colors.WHITE),
                                     ft.Text(" "),
                                     ft.Text("   Välfärd", size=15, color=TC),
-                                    ft.Text("   - Sänka höginkomstskatten", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Bromsa inflationen", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Prioriterar effektivitet och ansvar.", color=ft.colors.WHITE),
+                                    ft.Text("   - Balans mellan statlig hjälp och individuellt ansvar.", color=ft.colors.WHITE),
+                                    ft.Text("   - Strävar efter modernisering för att möta framtidens behov.", color=ft.colors.WHITE),
                                     ft.Text(" "),
                                     ft.Text("   Försvar", size=15, color=TC),
-                                    ft.Text("   - Stärka Sveriges försvar mot utländska makter genom NATO", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Införa obligatorisk värnplikt", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER)
+                                    ft.Text("   - Slutföra den militära integrationen med Nato", color=ft.colors.WHITE),
+                                    ft.Text("   - Prioriterar en stark och modern försvarsmakt.", color=ft.colors.WHITE),
+                                    ft.Text("   - Vill investera i försvarets för långsiktig försvarsförmåga.", color=ft.colors.WHITE)
                                 ]
                              )  
                         )
@@ -278,46 +282,7 @@ def main(page: ft.Page):
                             width=350,
                             height=700,
                             bgcolor=BG,
-                            border_radius=35,
-                            content = ft.Column(
-                                spacing=10,
-                                scroll=ft.ScrollMode.AUTO,
-                                controls=[
-                                    ft.Text(" "),
-                                    ft.Text(" "),
-                                    ft.Text("   Brott och Straff", size=15, color=TC),
-                                    ft.Text("   - Ge mer bidrag till tull för att stoppa smuggling av vapen, narkotika", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Jobba proaktivt med att stoppa värvning av unga till gängkriminalitet", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("  "),
-                                    ft.Text("   Skola", size=15, color=TC),
-                                    ft.Text("   - Satsa miljarder på 150 skolor med störst behov för att förbättra kunskapsresultaten, inklusive att anställa fler lärare och förbättra elevhälsan.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Införa ett rättvist skolval och omforma skolpengen för ökad likvärdighet.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Ge kommunerna vetorätt vid etablering av friskolor och förbjuda vinstuttag.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Förbjuda religiösa friskolor och fortsätta investera i skolan för att minska ojämlikheten.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Införa nolltolerans mot skolfrånvaro och satsa på skolsocionomer i utsatta områden.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Införa strängare straff för brott mot utbildningspersonal och garantera läxhjälp för elever i behov.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text(" "),
-                                    ft.Text("   Välfärd", size=15, color=TC),
-                                    ft.Text("   - Återta demokratisk kontroll över välfärden och avskaffa vinstjakten.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Förhindra utförsäljningar och skapa en jämlik vård.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Investera i en förbättrad välfärd genom att anställa fler vård- och skolpersonal för att minska köerna.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Ge vård efter behov, inte plånbok, för att korta vårdköerna och prioritera de mest behövande.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Införa fast omsorgskontakt i hemtjänsten och främja social samvaro samt idrott och friluftsliv för äldre.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Kräva öppenhet och transparens i friskolor och privata utförare inom vård och omsorg, på samma sätt som för offentliga aktörer.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text(" "),
-                                    ft.Text("   Försvar", size=15, color=TC),
-                                    ft.Text("   - Stärka Sveriges försvar mot utländska makter genom NATO", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Införa obligatorisk värnplikt", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text(" "),
-                                    ft.Text("   Klimat", size=15, color=TC),
-                                    ft.Text("   - Sänka bilkostnader för glesbygdsinvånare och öka användningen av biodrivmedel.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Öka tillgängligheten av laddstolpar och underlätta användningen av elbilar.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Erbjuda ekonomiskt stöd för energieffektivisering i flerbostadshus.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Stärka industriklivet och klimatberedskapen genom ökade investeringar.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Reformera reseavdraget och erbjuda avgiftsfri kollektivtrafik för studenter.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
-                                    ft.Text("   - Förbättra järnvägsinfrastrukturen och effektivisera tillståndsprocesser för verksamheter.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER)
-                                ]
-                             )  
+                            border_radius=35
                         )
                     ]
                 )
