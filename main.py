@@ -155,7 +155,7 @@ def main(page: ft.Page):
                                 controls=[
                                     ft.Text(" "),
                                     ft.Text(" "),
-                                    ft.Text("   - Moderaterna förespråkar hårdare straff och restriktivare åtgärder för att bekämpa brottslighet", color=ft.colors.WHITE),
+                                    ft.Text('   - "Moderaterna", color=TC, "förespråkar hårdare straff och restriktivare åtgärder för att bekämpa brottslighet"', color=ft.colors.WHITE),
                                     ft.Text("   - Socialdemokraterna har en balanserad syn som värdesätter både förebyggande arbete och effektiva straffåtgärder för att minska brottsligheten", color=ft.colors.WHITE),
                                     ft.Text("   - Vänsterpartiet betonar förebyggande åtgärder och alternativa straffmetoder för att minska brottsligheten", color=ft.colors.WHITE),
                                     ft.Text("   - Miljöpartiet lägger fokus på att adressera sociala orsaker till brottslighet och förespråkar alternativa metoder för att minska den", color=ft.colors.WHITE),
