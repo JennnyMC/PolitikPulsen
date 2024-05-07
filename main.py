@@ -122,14 +122,14 @@ def main(page: ft.Page):
                                 controls=[
                                     ft.Text(" "),
                                     ft.Text(" "),
-                                    ft.Text("   - Moderaterna vill att alla ska gå i skolan", color=ft.colors.WHITE),
-                                    ft.Text("   - Socialdemokraterna vill ha fler lärare", color=ft.colors.WHITE),
-                                    ft.Text("   - Vänsterpartiet vill ha fler bidrag till skolstöd", color=ft.colors.WHITE),
-                                    ft.Text("   - Miljöpartiet främjar en grönare syllabus", color=ft.colors.WHITE),
-                                    ft.Text("   - Centerpartiet avser att lägga mer vikt vid samhäll och kulturundervisning", color=ft.colors.WHITE),
-                                    ft.Text("   - Liberalerna vill ha fler lärare och stödlärare", color=ft.colors.WHITE),
-                                    ft.Text("   - Sverigedemokraterna vill öka budgeten för tolkar och svenskaundervisning", color=ft.colors.WHITE),
-                                    ft.Text("   - Kristdemokraterna vill ha mindre klasser för att ha fler lärare per elev", color=ft.colors.WHITE)
+                                    ft.Text("   - Moderaterna betonar höjda kunskapskrav och ökad lärarkompetens med en inriktning på kärnämnena samt valfrihet för elever och föräldrar genom fler skolalternativ.", color=ft.colors.WHITE),
+                                    ft.Text("   - Socialdemokraterna fokuserar på att förbättra likvärdigheten i skolan genom resurstillskott till socioekonomiskt utsatta områden och stärkande av läraryrkets status.", color=ft.colors.WHITE),
+                                    ft.Text("   - Vänsterpartiet arbetar för en jämlik skola med likvärdiga förutsättningar för alla elever genom åtgärder mot skolsegregation, offentlig kontroll över skolpengen och stopp för vinster i skolan.", color=ft.colors.WHITE),
+                                    ft.Text("   - Miljöpartiet strävar efter en hållbar och inkluderande skola med satsningar på miljö- och utomhuspedagogik samt minskade klyftor genom resursförstärkningar till utsatta områden.", color=ft.colors.WHITE),
+                                    ft.Text("   - Centerpartiet strävar efter individanpassad undervisning och mindre klassstorlekar med ökad autonomi för skolor och satsningar på digitalisering och entreprenörskap.", color=ft.colors.WHITE),
+                                    ft.Text("   - Liberalerna fokuserar på att höja läraryrkets status och främja valfrihet för elever och föräldrar genom fler skolalternativ och kompetensbaserade lönesystem.", color=ft.colors.WHITE),
+                                    ft.Text("   - Sverigedemokraterna fokuserar på att stärka den svenska skolan genom att betona trygghet, disciplin och nationellt fokus i undervisningen samt ökad kontroll över invandringens påverkan på skolan.", color=ft.colors.WHITE),
+                                    ft.Text("   - Kristdemokraterna betonar trygghet och auktoritet i skolan genom stärkande av lärarnas roll och samarbete mellan skola, föräldrar och lokalsamhälle.", color=ft.colors.WHITE)
                                 ]
                             )
                         )
