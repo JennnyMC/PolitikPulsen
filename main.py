@@ -5,6 +5,7 @@ def main(page: ft.Page):
     page.title = "PolitikPulsen"
     BG = "#1A5577"
     MC = "#60AEDA"
+    TC = "#B5FFB3"
 
     def add_images_to_values_view():
         # List of image URLs
@@ -245,19 +246,19 @@ def main(page: ft.Page):
                                 controls=[
                                     ft.Text(" "),
                                     ft.Text(" "),
-                                    ft.Text("   Brott och Straff", size=15, color=ft.colors.WHITE),
+                                    ft.Text("   Brott och Straff", size=15, color=TC),
                                     ft.Text("   - Ge mer bidrag till tull för att stoppa smuggling av vapen, narkotika", color=ft.colors.WHITE),
                                     ft.Text("   - Jobba proaktivt med att stoppa värvning av unga till gängkriminalitet", color=ft.colors.WHITE),
                                     ft.Text("  "),
-                                    ft.Text("   Skola", size=15, color=ft.colors.WHITE),
+                                    ft.Text("   Skola", size=15, color=TC),
                                     ft.Text("   - Mer stödlärare och fler lärare bland klasser", color=ft.colors.WHITE),
                                     ft.Text("   - Främja bättre studiero", color=ft.colors.WHITE),
                                     ft.Text(" "),
-                                    ft.Text("   Välfärd", size=15, color=ft.colors.WHITE),
+                                    ft.Text("   Välfärd", size=15, color=TC),
                                     ft.Text("   - Sänka höginkomstskatten", color=ft.colors.WHITE),
                                     ft.Text("   - Bromsa inflationen", color=ft.colors.WHITE),
                                     ft.Text(" "),
-                                    ft.Text("   Försvar", size=15, color=ft.colors.WHITE),
+                                    ft.Text("   Försvar", size=15, color=TC),
                                     ft.Text("   - Stärka Sveriges försvar mot utländska makter genom NATO", color=ft.colors.WHITE),
                                     ft.Text("   - Införa obligatorisk värnplikt", color=ft.colors.WHITE)
                                 ]
@@ -277,7 +278,38 @@ def main(page: ft.Page):
                             width=350,
                             height=700,
                             bgcolor=BG,
-                            border_radius=35
+                            border_radius=35,
+                            content = ft.Column(
+                                spacing=10,
+                                scroll=ft.ScrollMode.AUTO,
+                                controls=[
+                                    ft.Text(" "),
+                                    ft.Text(" "),
+                                    ft.Text("   Brott och Straff", size=15, color=TC),
+                                    ft.Text("   - Ge mer bidrag till tull för att stoppa smuggling av vapen, narkotika", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Jobba proaktivt med att stoppa värvning av unga till gängkriminalitet", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("  "),
+                                    ft.Text("   Skola", size=15, color=TC),
+                                    ft.Text("   - Mer stödlärare och fler lärare bland klasser", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Främja bättre studiero", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text(" "),
+                                    ft.Text("   Välfärd", size=15, color=TC),
+                                    ft.Text("   - Sänka höginkomstskatten", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Bromsa inflationen", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text(" "),
+                                    ft.Text("   Försvar", size=15, color=TC),
+                                    ft.Text("   - Stärka Sveriges försvar mot utländska makter genom NATO", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Införa obligatorisk värnplikt", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text(" "),
+                                    ft.Text("   Klimat", size=15, color=TC),
+                                    ft.Text("   - Sänka bilkostnader för glesbygdsinvånare och öka användningen av biodrivmedel.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Öka tillgängligheten av laddstolpar och underlätta användningen av elbilar.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Erbjuda ekonomiskt stöd för energieffektivisering i flerbostadshus.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Stärka industriklivet och klimatberedskapen genom ökade investeringar.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Reformera reseavdraget och erbjuda avgiftsfri kollektivtrafik för studenter.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER),
+                                    ft.Text("   - Förbättra järnvägsinfrastrukturen och effektivisera tillståndsprocesser för verksamheter.", color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER)
+                                ]
+                             )  
                         )
                     ]
                 )
