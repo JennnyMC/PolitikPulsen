@@ -155,14 +155,14 @@ def main(page: ft.Page):
                                 controls=[
                                     ft.Text(" "),
                                     ft.Text(" "),
-                                    ft.Text("   - Moderaterna vill ha hårdare straff och lägga mer budget på tullen", color=ft.colors.WHITE),
-                                    ft.Text("   - Socialdemokraterna vill ha fler poliser och mer lokalt stöd", color=ft.colors.WHITE),
-                                    ft.Text("   - Vänsterpartiet vill ge ha fler straffrabatter och arbeta med att få unga ut ur gängkriminalitet", color=ft.colors.WHITE),
-                                    ft.Text("   - Miljöpartiet vill jobba proaktivt från skolan med att minska kriminalitet bland unga", color=ft.colors.WHITE),
-                                    ft.Text("   - Centerpartiet vill ha fler poliser på stan och öka allmänhetens uppsikt", color=ft.colors.WHITE),
-                                    ft.Text("   - Liberalerna vill ha hårdare straff och minska straffrabatten", color=ft.colors.WHITE),
-                                    ft.Text("   - Sverigedemokraterna vill jobba mer aggressivt i utsatta områden frö att minska gängverksamhet", color=ft.colors.WHITE),
-                                    ft.Text("   - Kristdemokraterna vill ha hårdare straff", color=ft.colors.WHITE)
+                                    ft.Text("   - Moderaterna förespråkar hårdare straff och restriktivare åtgärder för att bekämpa brottslighet", color=ft.colors.WHITE),
+                                    ft.Text("   - Socialdemokraterna har en balanserad syn som värdesätter både förebyggande arbete och effektiva straffåtgärder för att minska brottsligheten", color=ft.colors.WHITE),
+                                    ft.Text("   - Vänsterpartiet betonar förebyggande åtgärder och alternativa straffmetoder för att minska brottsligheten", color=ft.colors.WHITE),
+                                    ft.Text("   - Miljöpartiet lägger fokus på att adressera sociala orsaker till brottslighet och förespråkar alternativa metoder för att minska den", color=ft.colors.WHITE),
+                                    ft.Text("   - Centerpartiet betonar vikten av en balans mellan förebyggande åtgärder och straffåtgärder för att öka tryggheten i samhället", color=ft.colors.WHITE),
+                                    ft.Text("   - Liberalerna söker en balans mellan straff och rehabilitering, med en betoning på individuell ansvarighet och förebyggande arbete för att minska brottslighet", color=ft.colors.WHITE),
+                                    ft.Text("   - Sverigedemokraterna lutar mot en hårdare linje med krav på strängare straff och en restriktiv invandringspolitik som kopplas till brottslighet", color=ft.colors.WHITE),
+                                    ft.Text("   - Kristdemokraterna fokuserar på att stärka brottsoffrens rättigheter och stödja hårdare straff för grova brott, samtidigt som de betonar vikten av förebyggande åtgärder och rehabilitering", color=ft.colors.WHITE)
                                 ]
                             )
                         )
