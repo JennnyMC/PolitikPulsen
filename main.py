@@ -6,8 +6,7 @@ def main(page: ft.Page):
     BG = "#1A5577"
     MC = "#60AEDA"
     TC = "#B5FFB3"
-    DC = "#7A83F2"
-    ITC= "#FFC86A"
+    ITC= "#FBEDD2"
     EC= "#D7DBFD"
 
     a5 = ft.Stack(
@@ -36,36 +35,7 @@ def main(page: ft.Page):
     img_gbg= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Göteborg_kommunvapen_-_Riksarkivet_Sverige.svg/1024px-Göteborg_kommunvapen_-_Riksarkivet_Sverige.svg.png"
     img_arj= "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Arjeplog_vapen.svg/248px-Arjeplog_vapen.svg.png"
     img_kings= "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Kungälv_vapen.svg/248px-Kungälv_vapen.svg.png"
-    img_alla= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlp6ytQHTQa_B9-ahsMw_ei-AD7RxtdggWSg&s"
 
-    def add_images_to_values_view():
-        # List of image URLs
-        image_urls = [
-            "https://upload.wikimedia.org/wikipedia/commons/0/00/V%C3%A4nsterpartiet_logo.svg",
-            "https://bilder.riksdagen.se/publishedmedia/3sgk8lpoqlu2mht11nov/MP_partilogga.png",
-            "https://bilder.riksdagen.se/publishedmedia/e9omiy7wkxkhts7ptwal/Symbol_Socialdemokraterna-_134px.png",
-            "https://upload.wikimedia.org/wikipedia/commons/3/33/C_v1.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/c/c7/L_v1.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/8/85/M_v1.svg",
-            "https://bilder.riksdagen.se/publishedmedia/bnz3yl48fswzmc8cd4m8/KD_partilogga.png",
-            "https://bilder.riksdagen.se/publishedmedia/6gxtyz3j95i9xr0ejrbn/Sveriedemokraterna_132px.png",
-        ]
-
-        # Add images to the row
-        images = ft.Column(expand=1, wrap=False, scroll="always")
-        for url in image_urls:
-            images.controls.append(
-                ft.Image(
-                    src=url,
-                    width=100,
-                    height=100,
-                    fit=ft.ImageFit.FIT_HEIGHT,
-                    repeat=ft.ImageRepeat.NO_REPEAT,
-                    border_radius=ft.border_radius.all(10),
-                )
-            )
-        return images
-    
     
 
     def route_change(route):
@@ -114,8 +84,11 @@ def main(page: ft.Page):
                     ],
                     width=200,
                     border_radius=15,
-                    on_change=lambda _:page.go("/" + dd.value.lower() )
+                    bgcolor=EC,
+                    filled=True,
+                    on_change=lambda _:page.go("/" + dd.value.lower() )  
             )
+            
             page.views.append(
                 ft.View(
                     "/compare",
@@ -127,14 +100,33 @@ def main(page: ft.Page):
                             height=700,
                             bgcolor=BG,
                             border_radius=35,
-                            content= ft.Stack(
+                            content= ft.Column(
                                 controls=[
                                     ft.Text("\n "),  # newline added here
                                     ft.Text("\n "),  # additional newli
-                                    ft.Text("         Välj parti", size=20, color=ft.colors.WHITE),
-                                    dd,
+                                    
+                                    ft.Container(
+                                        ft.Text("Välj område", size=20, color=ft.colors.WHITE),
+                                        alignment=ft.alignment.center
+                                    ),
+                                    ft.Container(
+                                        content=dd,
+                                        alignment=ft.alignment.center,
+                                    ),
+                                    ft.Container(
+                                        content=ft.Image(
+                                            src=f"/jamfar.png",
+                                            width=350,
+                                            #height=50,
+                                            fit=ft.ImageFit.CONTAIN
+                                        ),
+                                        alignment=ft.alignment.center
+                                    )
                                 ],
-                            )
+                                #alignment=ft.MainAxisAlignment.CENTER
+                                
+                            ),
+                            alignment=ft.alignment.top_center
                         )
                     ],
                 )
@@ -314,7 +306,20 @@ def main(page: ft.Page):
                             height=700,
                             bgcolor=BG,
                             border_radius=35,
-                            padding= ft.padding.only(top=50, left=20, right=20, bottom=20)
+                            padding= ft.padding.only(top=0, left=20, right=20, bottom=20),
+                            content = ft.Column(
+                                spacing=15,
+                                scroll=ft.ScrollMode.AUTO,
+                                controls=[
+                                    ft.Text(" "),
+                                    ft.Image(
+                                        src=f"/partistatistik.png",
+                                        width=350,
+                                        #height=50,
+                                        fit=ft.ImageFit.CONTAIN
+                                    )
+                                ]
+                            )
                         )
                     ],
                 )
@@ -335,6 +340,8 @@ def main(page: ft.Page):
                     ],
                     width=200,
                     border_radius=15,
+                    bgcolor=EC,
+                    filled=True,
                     on_change=lambda _:page.go("/" + dv.value.lower() )
             )
             page.views.append(
@@ -348,14 +355,33 @@ def main(page: ft.Page):
                             height=700,
                             bgcolor=BG,
                             border_radius=35,
-                            content= ft.Stack(
+                            content= ft.Column(
                                 controls=[
                                     ft.Text("\n "),  # newline added here
                                     ft.Text("\n "),  # additional newli
-                                    ft.Text("         Välj parti", size=20, color=ft.colors.WHITE),
-                                    dv,
-                                ]
-                            )
+                                    
+                                    ft.Container(
+                                        ft.Text("Välj parti", size=20, color=ft.colors.WHITE),
+                                        alignment=ft.alignment.center
+                                    ),
+                                    ft.Container(
+                                        content=dv,
+                                        alignment=ft.alignment.center,
+                                    ),
+                                    ft.Container(
+                                        content=ft.Image(
+                                            src=f"/sammanfattning.png",
+                                            width=350,
+                                            #height=50,
+                                            fit=ft.ImageFit.CONTAIN,
+                                        ),
+                                        alignment=ft.alignment.center
+                                    )
+                                ],
+                                #alignment=ft.MainAxisAlignment.CENTER
+                                
+                            ),
+                            alignment=ft.alignment.top_center
                         )
                     ]
 
@@ -561,6 +587,8 @@ def main(page: ft.Page):
                     ],
                     width=200,
                     border_radius=15,
+                    bgcolor=EC,
+                    filled=True,
                     on_change=lambda _:page.go("/" + dl.value.lower() )
             )
             page.views.append(
@@ -574,14 +602,33 @@ def main(page: ft.Page):
                             height=700,
                             bgcolor=BG,
                             border_radius=35,
-                            content= ft.Stack(
+                            content= ft.Column(
                                 controls=[
                                     ft.Text("\n "),  # newline added here
                                     ft.Text("\n "),  # additional newli
-                                    ft.Text("         Välj kommun", size=20, color=ft.colors.WHITE),
-                                    dl,
-                                ]
-                            )
+                                    
+                                    ft.Container(
+                                        ft.Text("Välj kommun", size=20, color=ft.colors.WHITE),
+                                        alignment=ft.alignment.center
+                                    ),
+                                    ft.Container(
+                                        content=dl,
+                                        alignment=ft.alignment.center,
+                                    ),
+                                    ft.Container(
+                                        content=ft.Image(
+                                            src=f"/local.png",
+                                            width=350,
+                                            #height=50,
+                                            fit=ft.ImageFit.CONTAIN,
+                                        ),
+                                        alignment=ft.alignment.center
+                                    )
+                                ],
+                                #alignment=ft.MainAxisAlignment.CENTER
+                                
+                            ),
+                            alignment=ft.alignment.top_center
                         )
                     ]
                 )
@@ -610,11 +657,18 @@ def main(page: ft.Page):
                                         height=150,
                                         fit=ft.ImageFit.CONTAIN
                                     ),
-                                    ft.Text("Parkering i centrala stan görs om till sommartorg", color=TC),
-                                    ft.Text("Skola ger upp vegetarisk bamba - tar tillbaka kött", color=TC),
-                                    ft.Text("Hisingsbron har sår - måste lagas", color=TC),
-                                    ft.Text("VÄSTLÄNKEN - ny trafikbro i Rosenlund", color= TC),
-                                    ft.Text("VÄSTLÄNKEN - Pelarna börjar ta form på korsvägen", color=TC)
+                                    ft.Text("Parkering i centrala Göteorg görs om till sommartorg:", color=ITC),
+                                    ft.Markdown("[Se här](https://sverigesradio.se/artikel/kommunen-skrotar-p-platser-i-centrum-blir-sommartorg)", auto_follow_links=True),
+                                    ft.Text("Skola ger upp vegetarisk bamba - tar tillbaka kött:", color=ITC),
+                                    ft.Markdown("[Se här](https://www.gp.se/nyheter/goteborg/klara-teoretiska-gymnasium-tar-tillbaka-kott-i-bamba.8647097d-c505-4194-be63-e2107db401ca)", auto_follow_links=True),
+                                    ft.Text("Träd i Eriksberg räddas när cykelbana breddas:", color=ITC),
+                                    ft.Markdown("[Se här](https://goteborg.se/wps/portal/aktuelltarkivet/aktuellt/377ab02a-97e8-4d49-88ad-b7472a560486)", auto_follow_links=True),
+                                    ft.Text("De får åka gratis kollektivt hela sommaren:", color=ITC),
+                                    ft.Markdown("[Se här](https://goteborg.se/wps/portal/aktuelltarkivet/aktuellt/2f384fd8-3aad-446c-a8ce-92f2fb238444)", auto_follow_links=True),
+                                    ft.Text("VÄSTLÄNKEN - ny trafikbro i Rosenlund:", color= ITC),
+                                    ft.Markdown("[Se här](https://www.trafikverket.se/vara-projekt/projekt-i-vastra-gotalands-lan/vastlanken/nyheter-for-projekt-vastlanken/2024/mars/ny-trafikbro-i-rosenlund/)", auto_follow_links=True),
+                                    ft.Text("VÄSTLÄNKEN - Pelarna börjar ta form på korsvägen:", color=ITC),
+                                    ft.Markdown("[Se här](https://www.trafikverket.se/vara-projekt/projekt-i-vastra-gotalands-lan/vastlanken/nyheter-for-projekt-vastlanken/2024/april/pelarna-i-korsvagen/)", auto_follow_links=True)
                                 ]
                             )    
                         )
@@ -693,7 +747,21 @@ def main(page: ft.Page):
                             width=350,
                             height=700,
                             bgcolor=BG,
-                            border_radius=35
+                            border_radius=35,
+                            padding= ft.padding.only(top=0, left=20, right=20, bottom=20),
+                            content = ft.Column(
+                                spacing=15,
+                                scroll=ft.ScrollMode.AUTO,
+                                controls=[
+                                    ft.Text(" "),
+                                    ft.Image(
+                                        src=f"/quiz.png",
+                                        width=350,
+                                        #height=50,
+                                        fit=ft.ImageFit.CONTAIN
+                                    )
+                                ]
+                            )
                         )
                     ]
                 )
@@ -711,7 +779,21 @@ def main(page: ft.Page):
                             width=350,
                             height=700,
                             bgcolor=BG,
-                            border_radius=35
+                            border_radius=35,
+                            padding= ft.padding.only(top=0, left=20, right=20, bottom=20),
+                            content = ft.Column(
+                                spacing=15,
+                                scroll=ft.ScrollMode.AUTO,
+                                controls=[
+                                    ft.Text(" "),
+                                    ft.Image(
+                                        src=f"/topplista.png",
+                                        width=350,
+                                        #height=50,
+                                        fit=ft.ImageFit.CONTAIN
+                                    )
+                                ]
+                            )
                         )
                     ]
                 )
