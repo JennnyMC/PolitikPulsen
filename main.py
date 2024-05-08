@@ -4,6 +4,7 @@ import flet as ft
 def main(page: ft.Page):
     page.title = "PolitikPulsen"
     BG = "#1A5577"
+    GG = "#60AEDA"
     MC = "#60AEDA"
     TC = "#B5FFB3"
     ITC= "#FBEDD2"
@@ -46,6 +47,11 @@ def main(page: ft.Page):
                 [
                     ft.AppBar(title=ft.Text("PolitikPulsen"), bgcolor=MC),
                     ft.Container(
+                        gradient=ft.LinearGradient(
+                            begin=ft.alignment.top_right,
+                            end=ft.alignment.bottom_left,
+                            colors=[BG, GG],
+                        ),
                         content=ft.Column(
                             [
                                 a5,
@@ -66,7 +72,7 @@ def main(page: ft.Page):
                             ],
                             alignment=ft.MainAxisAlignment.CENTER,
                         ),
-                        bgcolor = BG,
+                        #bgcolor = BG,
                         border_radius=35,
                         width=350,
                         height=700,
@@ -103,9 +109,14 @@ def main(page: ft.Page):
                         ft.AppBar(title=ft.Text("Jämför Ståndpunkter"), bgcolor=MC),
                         #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
+                            gradient=ft.LinearGradient(
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                                colors=[BG, GG],
+                            ),
                             width=350,
                             height=700,
-                            bgcolor=BG,
+                            #bgcolor=BG,
                             border_radius=35,
                             content= ft.Column(
                                 controls=[
@@ -142,9 +153,14 @@ def main(page: ft.Page):
                         ft.AppBar(title=ft.Text("Jämför Ståndpunkter - Skola"), bgcolor=MC),
                         #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
+                            gradient=ft.LinearGradient(
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                                colors=[BG, GG],
+                            ),
                             width=350,
                             height=700,
-                            bgcolor=BG,
+                            #bgcolor=BG,
                             border_radius=35,
                             padding= ft.padding.only(top=50, left=20, right=20, bottom=20),
                             content = ft.Column(
@@ -223,9 +239,14 @@ def main(page: ft.Page):
                         ft.AppBar(title=ft.Text("Jämför Ståndpunkter - Brottsbekämpning"), bgcolor=MC),
                         #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
+                            gradient=ft.LinearGradient(
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                                colors=[BG, GG],
+                            ),
                             width=350,
                             height=700,
-                            bgcolor=BG,
+                            #bgcolor=BG,
                             border_radius=35,
                             padding= ft.padding.only(top=50, left=20, right=20, bottom=20),
                             content = ft.Column(
@@ -303,13 +324,18 @@ def main(page: ft.Page):
                         ft.AppBar(title=ft.Text("Genomförda vallöften"), bgcolor=MC),
                         #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
+                            gradient=ft.LinearGradient(
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                                colors=[BG, GG],
+                            ),
                             width=350,
                             height=700,
-                            bgcolor=BG,
+                            #bgcolor=BG,
                             border_radius=35,
-                            padding= ft.padding.only(top=0, left=20, right=20, bottom=20),
+                            #padding= ft.padding.only(top=0, left=20, right=20, bottom=20),
                             content = ft.Column(
-                                spacing=15,
+                                #spacing=15,
                                 scroll=ft.ScrollMode.AUTO,
                                 controls=[
                                     ft.Text(" "),
@@ -357,8 +383,13 @@ def main(page: ft.Page):
                         ft.Container(
                             width=350,
                             height=700,
-                            bgcolor=BG,
+                            #bgcolor=BG,
                             border_radius=35,
+                            gradient=ft.LinearGradient(
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                                colors=[BG, GG],
+                            ),
                             content= ft.Column(
                                 controls=[
                                     ft.Text("\n "),  
@@ -397,8 +428,13 @@ def main(page: ft.Page):
                         ft.Container(
                             width=350,
                             height=700,
-                            bgcolor=BG,
+                            #bgcolor=BG,
                             border_radius=35,
+                            gradient=ft.LinearGradient(
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                                colors=[BG, GG],
+                            ),
                             padding= ft.padding.only(top=50, left=20, right=20, bottom=20),
                              content = ft.Column(
                                 spacing=10,
@@ -455,8 +491,13 @@ def main(page: ft.Page):
                         ft.Container(
                             width=350,
                             height=700,
-                            bgcolor=BG,
+                            #bgcolor=BG,
                             border_radius=35,
+                            gradient=ft.LinearGradient(
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                                colors=[BG, GG],
+                            ),
                             padding= ft.padding.only(top=50, left=20, right=20, bottom=20),
                             content = ft.Column(
                                 spacing=10,
@@ -525,8 +566,13 @@ def main(page: ft.Page):
                         ft.Container(
                             width=350,
                             height=700,
-                            bgcolor=BG,
+                            #bgcolor=BG,
                             border_radius=35,
+                            gradient=ft.LinearGradient(
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                                colors=[BG, GG],
+                            ),
                             padding= ft.padding.only(top=50, left=20, right=20, bottom=20),
                             content = ft.Column(
                                 spacing=10,
@@ -601,8 +647,13 @@ def main(page: ft.Page):
                         ft.Container(
                             width=350,
                             height=700,
-                            bgcolor=BG,
+                            #bgcolor=BG,
                             border_radius=35,
+                            gradient=ft.LinearGradient(
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                                colors=[BG, GG],
+                            ),
                             content= ft.Column(
                                 controls=[
                                     ft.Text("\n "),
@@ -653,7 +704,7 @@ def main(page: ft.Page):
                                         fit=ft.ImageFit.CONTAIN
                                     ),
                                     ft.Text("Parkering i centrala Göteorg görs om till sommartorg:", color=ITC),
-                                    ft.Markdown("[Se här](https://sverigesradio.se/artikel/kommunen-skrotar-p-platser-i-centrum-blir-sommartorg)", auto_follow_links=True),
+                                    ft.Markdown("[Se här](https://sverigesradio.se/artikel/kommunen-skrotar-p-platser-i-centrum-blir-sommartorg)", auto_follow_links=True, code_theme="atom-one-dark"),
                                     ft.Text("Skola ger upp vegetarisk bamba - tar tillbaka kött:", color=ITC),
                                     ft.Markdown("[Se här](https://www.gp.se/nyheter/goteborg/klara-teoretiska-gymnasium-tar-tillbaka-kott-i-bamba.8647097d-c505-4194-be63-e2107db401ca)", auto_follow_links=True),
                                     ft.Text("Träd i Eriksberg räddas när cykelbana breddas:", color=ITC),
@@ -760,8 +811,13 @@ def main(page: ft.Page):
                         ft.Container(
                             width=350,
                             height=700,
-                            bgcolor=BG,
+                            #bgcolor=BG,
                             border_radius=35,
+                            gradient=ft.LinearGradient(
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                                colors=[BG, GG],
+                            ),
                             padding= ft.padding.only(top=0, left=20, right=20, bottom=20),
                             content = ft.Column(
                                 spacing=15,
