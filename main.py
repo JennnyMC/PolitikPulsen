@@ -51,7 +51,11 @@ def main(page: ft.Page):
                                 a5,
                                 ft.Text("Peter Karlsson", size=15,text_align=ft.TextAlign.LEFT, color=ft.colors.WHITE),
                                 ft.Text(" "),
-                                ft.Text(" "),
+                                ft.Image(
+                                    src=f"/prevote.png",
+                                    width=300,
+                                    fit=ft.ImageFit.CONTAIN
+                                ),
                                 ft.ElevatedButton("Åsiktsjämförelse",bgcolor=EC,icon="ARROW_FORWARD_IOS", on_click=lambda _: page.go("/compare")),
                                 ft.ElevatedButton("Genomförda Vallöften",bgcolor=EC, icon="ARROW_FORWARD_IOS", on_click=lambda _: page.go("/stats")),
                                 ft.ElevatedButton("Partiståndpunkter", bgcolor=EC, icon="ARROW_FORWARD_IOS", on_click=lambda _: page.go("/values")),
@@ -86,6 +90,9 @@ def main(page: ft.Page):
                     border_radius=15,
                     bgcolor=EC,
                     filled=True,
+                    border_color=EC,
+                    color=ft.colors.BLUE_800,
+                    label="Välj område",
                     on_change=lambda _:page.go("/" + dd.value.lower() )  
             )
             
@@ -94,7 +101,7 @@ def main(page: ft.Page):
                     "/compare",
                     [
                         ft.AppBar(title=ft.Text("Jämför Ståndpunkter"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -102,13 +109,9 @@ def main(page: ft.Page):
                             border_radius=35,
                             content= ft.Column(
                                 controls=[
-                                    ft.Text("\n "),  # newline added here
-                                    ft.Text("\n "),  # additional newli
-                                    
-                                    ft.Container(
-                                        ft.Text("Välj område", size=20, color=ft.colors.WHITE),
-                                        alignment=ft.alignment.center
-                                    ),
+                                    ft.Text("\n "), 
+                                    ft.Text("\n "), 
+                                    ft.Text(" "),
                                     ft.Container(
                                         content=dd,
                                         alignment=ft.alignment.center,
@@ -123,8 +126,6 @@ def main(page: ft.Page):
                                         alignment=ft.alignment.center
                                     )
                                 ],
-                                #alignment=ft.MainAxisAlignment.CENTER
-                                
                             ),
                             alignment=ft.alignment.top_center
                         )
@@ -139,7 +140,7 @@ def main(page: ft.Page):
                     "/skola",
                     [
                         ft.AppBar(title=ft.Text("Jämför Ståndpunkter - Skola"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -220,7 +221,7 @@ def main(page: ft.Page):
                     "/brottsbekämpning",
                     [
                         ft.AppBar(title=ft.Text("Jämför Ståndpunkter - Brottsbekämpning"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -300,7 +301,7 @@ def main(page: ft.Page):
                     "/stats",
                     [
                         ft.AppBar(title=ft.Text("Genomförda vallöften"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -342,6 +343,9 @@ def main(page: ft.Page):
                     border_radius=15,
                     bgcolor=EC,
                     filled=True,
+                    border_color=EC,
+                    color=ft.colors.BLUE_800,
+                    label="Välj parti",
                     on_change=lambda _:page.go("/" + dv.value.lower() )
             )
             page.views.append(
@@ -349,7 +353,7 @@ def main(page: ft.Page):
                     "/values",
                     [
                         ft.AppBar(title=ft.Text("Sammanfattning Partiåsikter"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -357,13 +361,9 @@ def main(page: ft.Page):
                             border_radius=35,
                             content= ft.Column(
                                 controls=[
-                                    ft.Text("\n "),  # newline added here
-                                    ft.Text("\n "),  # additional newli
-                                    
-                                    ft.Container(
-                                        ft.Text("Välj parti", size=20, color=ft.colors.WHITE),
-                                        alignment=ft.alignment.center
-                                    ),
+                                    ft.Text("\n "),  
+                                    ft.Text("\n "),
+                                    ft.Text(" "),  
                                     ft.Container(
                                         content=dv,
                                         alignment=ft.alignment.center,
@@ -377,9 +377,7 @@ def main(page: ft.Page):
                                         ),
                                         alignment=ft.alignment.center
                                     )
-                                ],
-                                #alignment=ft.MainAxisAlignment.CENTER
-                                
+                                ],  
                             ),
                             alignment=ft.alignment.top_center
                         )
@@ -395,7 +393,7 @@ def main(page: ft.Page):
                     "/moderaterna",
                     [
                         ft.AppBar(title=ft.Text("Sammanfattning Partiåsikter - Moderaterna"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -453,7 +451,7 @@ def main(page: ft.Page):
                     "/socialdemokraterna",
                     [
                         ft.AppBar(title=ft.Text("Sammanfattning Partiåsikter - Socialdemokraterna"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -523,7 +521,7 @@ def main(page: ft.Page):
                     "/sverigedemokraterna",
                     [
                         ft.AppBar(title=ft.Text("Sammanfattning Partiåsikter - Sverigedemokraterna"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -589,6 +587,9 @@ def main(page: ft.Page):
                     border_radius=15,
                     bgcolor=EC,
                     filled=True,
+                    border_color=EC,
+                    color=ft.colors.BLUE_800,
+                    label="Välj kommun",
                     on_change=lambda _:page.go("/" + dl.value.lower() )
             )
             page.views.append(
@@ -596,7 +597,7 @@ def main(page: ft.Page):
                     "/local",
                     [
                         ft.AppBar(title=ft.Text("Vad Händer Hos Dig?"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -604,13 +605,9 @@ def main(page: ft.Page):
                             border_radius=35,
                             content= ft.Column(
                                 controls=[
-                                    ft.Text("\n "),  # newline added here
-                                    ft.Text("\n "),  # additional newli
-                                    
-                                    ft.Container(
-                                        ft.Text("Välj kommun", size=20, color=ft.colors.WHITE),
-                                        alignment=ft.alignment.center
-                                    ),
+                                    ft.Text("\n "),
+                                    ft.Text("\n "),
+                                    ft.Text(" "),
                                     ft.Container(
                                         content=dl,
                                         alignment=ft.alignment.center,
@@ -624,9 +621,7 @@ def main(page: ft.Page):
                                         ),
                                         alignment=ft.alignment.center
                                     )
-                                ],
-                                #alignment=ft.MainAxisAlignment.CENTER
-                                
+                                ],  
                             ),
                             alignment=ft.alignment.top_center
                         )
@@ -640,7 +635,7 @@ def main(page: ft.Page):
                     "/göteborg",
                     [
                         ft.AppBar(title=ft.Text("Detta händer i Göteborg"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -682,7 +677,7 @@ def main(page: ft.Page):
                     "/kungälv",
                     [
                         ft.AppBar(title=ft.Text("Detta händer i Kungälv"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -699,6 +694,17 @@ def main(page: ft.Page):
                                         height=150,
                                         fit=ft.ImageFit.CONTAIN
                                     ),
+                                    ft.Text("Snart får vi ett nytt utomhusgym i Älvparken:", color=ITC),
+                                    ft.Markdown("[Se här](https://www.kungalv.se/kommun--politik/nyheter/nytt-utegym-pa-gang/)", auto_follow_links=True),
+                                    ft.Text("Kommunen hyllar talangerna Adam Hilmersson och Isak Muminhodzic:", color=ITC),
+                                    ft.Markdown("[Se här](https://www.kungalv.se/kommun--politik/nyheter/pristagare/)", auto_follow_links=True),
+                                    ft.Text("Hur gick det för Kungälvs kommun 2023?", color=ITC),
+                                    ft.Markdown("[Se här](https://www.kungalv.se/kommun--politik/nyheter/hur-gick-det-for-kungalvs-kommun-2023/)", auto_follow_links=True),
+                                    ft.Text("Projekt för en hållbar livsstil i Kungälvs kommun:", color=ITC),
+                                    ft.Markdown("[Se här](https://www.kungalv.se/kommun--politik/nyheter/projekt-for-en-hallbar-livsstil-i-kungalvs-kommun/)", auto_follow_links=True),
+                                    ft.Text("Försvarsmakten övar på västkusten:", color=ITC),
+                                    ft.Markdown("[Se här](https://www.kungalv.se/kommun--politik/nyheter/forsvarsmakten-ovar-pa-vastkusten-13-20-mars/)", auto_follow_links=True)
+
                                 ]
                             )    
                         )
@@ -711,7 +717,7 @@ def main(page: ft.Page):
                     "/arjeplog",
                     [
                         ft.AppBar(title=ft.Text("Detta händer i Arjeplog"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -728,6 +734,14 @@ def main(page: ft.Page):
                                         height=150,
                                         fit=ft.ImageFit.CONTAIN
                                     ),
+                                    ft.Text("Hemtjänsten söker feriearbetare:", color=ITC),
+                                    ft.Markdown("[Se här](https://www.arjeplog.se/nyheter/nyheter-startsida-2024/2024-05-07-hemtjansten-soker-feriearbetare)", auto_follow_links=True),
+                                    ft.Text("Välkomna att träffa personal från samhällsbyggnadsenheten i Mellanström:", color=ITC),
+                                    ft.Markdown("[Se här](https://www.arjeplog.se/nyheter/nyheter-startsida-2024/2024-05-06-valkomna-att-traffa-personal-fran-samhallsbyggnadsenheten-i-mellanstrom)", auto_follow_links=True),
+                                    ft.Text("Skoterförbud inom Luokta Mavas samebys renskötselområde:", color=ITC),
+                                    ft.Markdown("[Se här](https://www.arjeplog.se/nyheter/nyheter-startsida-2024/2024-05-02-skoterforbud-inom-luokta-mavas-samebys-renskotselomrade)", auto_follow_links=True),
+                                    ft.Text("Eventuella vattenstörningar i Adolfsström:", color=ITC),
+                                    ft.Markdown("[Se här](https://www.arjeplog.se/nyheter/nyheter-startsida-2024/2024-04-09-eventuella-vattenstorningar-i-adolfsstrom)", auto_follow_links=True)
                                 ]
                             )    
                         )
@@ -742,7 +756,7 @@ def main(page: ft.Page):
                     "/quest",
                     [
                         ft.AppBar(title=ft.Text("Quiz"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
@@ -774,7 +788,7 @@ def main(page: ft.Page):
                     "/toplist",
                     [
                         ft.AppBar(title=ft.Text("Topplista"), bgcolor=MC),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        #ft.ElevatedButton("Go Home", bgcolor=EC, on_click=lambda _: page.go("/")),
                         ft.Container(
                             width=350,
                             height=700,
