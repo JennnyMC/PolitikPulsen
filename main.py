@@ -8,7 +8,7 @@ def main(page: ft.Page):
     MC = "#60AEDA"
     TC = "#B5FFB3"
     ITC= "#FBEDD2"
-    EC= "#D7DBFD"
+    EC= "#8EBCCE"
 
     a5 = ft.Stack(
         [
